@@ -1,0 +1,6 @@
+*~
+*.swp
+*.lo
+*.la
+.deps
+.libs
