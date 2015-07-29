@@ -19,7 +19,7 @@ int lengthOfLongestSubstring(char* s) {
         a = s[j];
         p = strchr(s+i,a);
         if( p >= s+i && p < s+j){
-            tmpsublen = 1;
+            tmpsublen = (tmpsublen>1) ? (tmpsublen-1) :1;
             i++;
         }else{
             if(i != j)
@@ -34,7 +34,7 @@ int lengthOfLongestSubstring(char* s) {
 
 int main()
 {
-    int a = lengthOfLongestSubstring("abcabcdd");
+    int a = lengthOfLongestSubstring("bdb");
     printf("%d\n",a);
     return 0;
 }
